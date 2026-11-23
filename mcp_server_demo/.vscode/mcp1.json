@@ -1,0 +1,30 @@
+{
+  "servers": {
+    "mcp-server-demo": {
+      "type": "stdio",
+      "command": "uv",
+      "args": ["run", "python", "server.py"],
+      "cwd": "${workspaceFolder}"
+    }
+  }
+}
+
+{
+  "mcpServers": {
+    "klayout": {
+      "url": "http://localhost:8001/mcp"
+    }
+  }
+}
+
+{
+  "mcpServers": {
+    "airbnb": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@openbnb/mcp-server-airbnb"
+      ]
+    }
+  }
+}

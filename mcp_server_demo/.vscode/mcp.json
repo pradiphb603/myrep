@@ -1,0 +1,21 @@
+
+
+{
+  "mcpServers": {
+    "airbnb": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@openbnb/mcp-server-airbnb"
+      ]
+    },
+    "klayout": {
+      "url": "http://localhost:8001/mcp"
+    },
+     "vscode-mcp": {
+      "command": "npx",
+      "args": ["-y", "@vscode-mcp/vscode-mcp-server@latest"]
+    }
+
+  }
+}
