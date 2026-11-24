@@ -39,8 +39,8 @@ async def main():
             "messages": [
                 {
                     "role": "user",
-                    #"content": "Read the GDS file and list all available layers. File name is output.gds"
-                    "content": "CreateLayout"
+                    "content": "Read the GDS file and list all available layers. File name is output.gds"
+                    #"content": "CreateLayout  and save the output to output.gds"
                 }
             ]
         }
