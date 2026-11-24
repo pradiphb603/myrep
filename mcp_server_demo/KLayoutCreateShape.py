@@ -1,5 +1,5 @@
 import klayout.db as db
-def create_layout():
+def create_rectangles():
     # Create a new layout object
     ly = db.Layout()
 

@@ -1303,7 +1303,7 @@ requires-dist = [
     { name = "langchain-mcp-adapters", specifier = ">=0.3.1" },
     { name = "langchain-ollama", specifier = ">=1.1.0" },
     { name = "langchain-openai", specifier = ">=1.8.5" },
-    { name = "mcp", extras = ["cli"], specifier = ">=1.30.0" },
+    { name = "mcp", extras = ["cli"], specifier = ">=2.3.0" },
 ]
 
 [[package]]

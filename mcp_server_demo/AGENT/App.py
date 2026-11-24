@@ -10,7 +10,7 @@ PROJECT_ROOT = os.path.dirname(
 
 sys.path.insert(0, PROJECT_ROOT)
 
-from Agent import run_agent
+from AGENT.Agent import run_agent
 
 
 # --------------------------------

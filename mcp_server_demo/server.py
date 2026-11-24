@@ -1,9 +1,10 @@
 #from mcp.server.mcpserver import MCPServer
 from mcp.server.fastmcp import FastMCP
-import kl
-import Read
+import KLayoutCreateShape
+import KlayoutReadGDS
 
 mcp=FastMCP("MY_MCP")
+#mcp=MCPServer("MY_MCP")
 
 
 @mcp.tool()
@@ -15,18 +16,18 @@ def subtract(a:int, b:int) -> int:
     return a-b
 
 @mcp.tool()
-async def CreateLayout() -> None:
-    kl.create_layout()
-    print("Successfully created layout and saved to output.gds")
+async def CreateRectangles() -> None:
+    KLayoutCreateShape.create_rectangles()
+    print("Successfully created rectangles and saved to output.gds")
 
 @mcp.tool()
 async def CreateRoute() -> None:
-    kl.create_route()
+    KLayoutCreateShape.create_route()
     print("Successfully created route and saved to output.gds")
 
 @mcp.tool()
 async def ReadGDS(fp: str) -> list[dict[str, int | str]]:
-    return Read.read_gds_file(file_path=fp)
+    return KlayoutReadGDS.read_gds_file(file_path=fp)
 
 if __name__ == "__main__":
     #mcp.run()
