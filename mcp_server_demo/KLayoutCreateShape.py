@@ -23,7 +23,7 @@ def create_rectangles(outFile= str ):
     #ly.write("/home/pradip-banerjee/MCPServerTutorial/mcp_server_demo/output.gds")
     ly.write(outFile)
 
-def create_route(outFile= str ):
+def create_route(outFile= str, start_point=(0, 0), end_point=(10000, 0), width=250):
     # Create a new layout object
     ly = db.Layout()
 
@@ -34,7 +34,9 @@ def create_route(outFile= str ):
     layer1 = ly.layer(1, 0)
     layer_info = ly.get_info(layer1)
     layer_info.name = "Metal1"
-    route = db.Path([db.Point(0, 0), db.Point(10000, 0)], 100)
+    print(f"Value of width is {width}")
+    width = int(width)
+    route = db.Path([db.Point(start_point[0], start_point[1]), db.Point(end_point[0], end_point[1])], width)
     top_cell.shapes(layer1).insert(route)
 
     # OASIS preserves string property keys such as "Prop"

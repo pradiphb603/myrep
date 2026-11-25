@@ -21,9 +21,10 @@ async def CreateRectangles(fp: str) -> None:
     print("Successfully created rectangles and saved to output.gds")
 
 @mcp.tool()
-async def CreateRoute(fp: str) -> None:
-    KLayoutCreateShape.create_route(outFile=fp)
-    print("Successfully created route and saved to output.gds")
+async def CreateRoute(fp: str, width=250) -> str:
+    KLayoutCreateShape.create_route(outFile=fp, width=width)
+    #print("Successfully created route and saved to output.gds")
+    return f"Successfully created route and saved to {fp}"
 
 @mcp.tool()
 async def ReadGDS(fp: str) -> list[dict[str, int | str]]:

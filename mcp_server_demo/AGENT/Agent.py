@@ -53,5 +53,6 @@ async def run_agent(messages):
     result = await agent.ainvoke(
         {"messages": messages}
     )
+
     return result["messages"][-1].content, tools
 
