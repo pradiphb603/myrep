@@ -8,23 +8,3 @@
     }
   }
 }
-
-{
-  "mcpServers": {
-    "klayout": {
-      "url": "http://localhost:8001/mcp"
-    }
-  }
-}
-
-{
-  "mcpServers": {
-    "airbnb": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@openbnb/mcp-server-airbnb"
-      ]
-    }
-  }
-}

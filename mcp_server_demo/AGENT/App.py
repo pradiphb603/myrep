@@ -38,7 +38,7 @@ with st.sidebar:
 
     st.header("Configuration")
 
-    st.text("LLM: Ollama")
+    st.text("LLM: Ollama beam:cloud")
 
     st.text("MCP: FastMCP HTTP")
 
@@ -73,9 +73,7 @@ for message in st.session_state.messages:
 # User input
 # --------------------------------
 
-if prompt := st.chat_input(
-    "Ask KLayout AI something..."
-):
+if prompt := st.chat_input("Ask KLayout AI something..."):
 
     # Display user message
 
