@@ -1,5 +1,5 @@
 import klayout.db as db
-def create_rectangles():
+def create_rectangles(outFile= str ):
     # Create a new layout object
     ly = db.Layout()
 
@@ -20,9 +20,10 @@ def create_rectangles():
     top_cell.shapes(layer3).insert(db.Box(400, 400, 1400, 2400))
 
     # OASIS preserves string property keys such as "Prop"
-    ly.write("/home/pradip-banerjee/MCPServerTutorial/mcp_server_demo/output.gds")
+    #ly.write("/home/pradip-banerjee/MCPServerTutorial/mcp_server_demo/output.gds")
+    ly.write(outFile)
 
-def create_route():
+def create_route(outFile= str ):
     # Create a new layout object
     ly = db.Layout()
 
@@ -37,6 +38,7 @@ def create_route():
     top_cell.shapes(layer1).insert(route)
 
     # OASIS preserves string property keys such as "Prop"
-    ly.write("/home/pradip-banerjee/MCPServerTutorial/mcp_server_demo/output.gds")
+    #ly.write("/home/pradip-banerjee/MCPServerTutorial/mcp_server_demo/output.gds")
+    ly.write(outFile)
 
 

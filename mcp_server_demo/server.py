@@ -16,13 +16,13 @@ def subtract(a:int, b:int) -> int:
     return a-b
 
 @mcp.tool()
-async def CreateRectangles() -> None:
-    KLayoutCreateShape.create_rectangles()
+async def CreateRectangles(fp: str) -> None:
+    KLayoutCreateShape.create_rectangles(outFile=fp)
     print("Successfully created rectangles and saved to output.gds")
 
 @mcp.tool()
-async def CreateRoute() -> None:
-    KLayoutCreateShape.create_route()
+async def CreateRoute(fp: str) -> None:
+    KLayoutCreateShape.create_route(outFile=fp)
     print("Successfully created route and saved to output.gds")
 
 @mcp.tool()
