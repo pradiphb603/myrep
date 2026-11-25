@@ -14,7 +14,7 @@ from AGENT.Agent import run_agent
 
 
 # --------------------------------
-# Page configuration
+# Page configuration setup
 # --------------------------------
 
 st.set_page_config(
@@ -31,7 +31,7 @@ st.caption(
 
 
 # --------------------------------
-# Sidebar
+# Sidebar 
 # --------------------------------
 
 with st.sidebar:
