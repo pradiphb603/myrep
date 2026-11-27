@@ -1,6 +1,7 @@
 import klayout.db as pya
 import subprocess, os, signal
 
+
 def open_klayout():
     # Open KLayout application
     subprocess.Popen(["klayout", "-e", "output.gds"])
@@ -15,6 +16,8 @@ def close_klayout():
     #print(result.stdout.split())
     for pid in result.stdout.split():
         os.kill(int(pid), signal.SIGKILL)
+
+
 
 def read_gds_file(
     file_path: str = "/home/pradip-banerjee/MCPServerTutorial/mcp_server_demo/output.gds",
